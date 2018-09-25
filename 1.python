@@ -1,0 +1,16 @@
+ans = input()
+ans2 = ""
+count = 0
+l = len(ans)
+for i in range(0, l):
+    if ans[i] != " ":
+        ans2 = ans2 + ans[i]
+l = len(ans2)
+while l != len(ans2) // 2:
+    if ans2[l - 1] != ans2[len(ans2) - l]:
+        count = count + 1
+    l = l - 1
+if count == 0:
+    print(1)
+else:
+    print(0)
